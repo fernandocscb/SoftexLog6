@@ -1,0 +1,148 @@
+Realizado no Visualg 2.5
+
+
+algoritmo "maiorNotaDasTurmas"
+var
+
+	nomeAluno, cadastro: caractere;
+	nota: real;
+	turma: caractere;
+	notaN1, notaN2, notaN3, notaN4: real;
+	contAluno: inteiro;
+	contNota: real;
+	maiorNota: real;
+
+
+inicio
+	
+	contAluno = 0;
+	contNota = 0;
+	notaN = 0;
+	maiorNota = 0;
+
+	escreva("Deseja cadastrar o desempenho de um novo aluno? [S/N]");
+	leia(cadastro);
+
+	
+REPITA
+
+	escreva ("Entre com a turma do aluno: ");
+	leia(turma);
+
+ESCOLHA (turma)
+	{
+
+	caso 'A': 
+		
+	escreva ("Entre com o nome do aluno: ");
+	leia(nomeAluno);
+
+	escreva ("Entre com a nota do aluno: ");
+	leia(nota);
+
+	se (nota >= 7) 
+	então { 
+		contAluno = contAluno+1; 
+		}
+	
+	se (nota > maiorNota) 
+	então {
+		 maiorNota = nota;
+		}
+	
+	notaN1 = maiorNota;
+
+fimSe
+fimSe
+	
+
+	caso 'B': 
+		
+	escreva ("Entre com o nome do aluno: ");
+	leia(nomeAluno);
+
+	escreva ("Entre com a nota do aluno: ");
+	leia(nota);
+
+	se (nota >= 7) 
+	então { 
+		contAluno = contAluno+1; 
+		}
+	
+	se (nota > maiorNota) 
+	então {
+		 maiorNota = nota;
+		}
+	
+	notaN2 = maiorNota;
+
+fimSe
+fimSe
+
+	caso 'C': 
+		
+	escreva ("Entre com o nome do aluno: ");
+	leia(nomeAluno);
+
+	escreva ("Entre com a nota do aluno: ");
+	leia(nota);
+
+	se (nota >= 7) 
+	então { 
+		contAluno = contAluno+1; 
+		}
+	
+	se (nota > maiorNota) 
+	então {
+		 maiorNota = nota;
+		}
+	
+	notaN3 = maiorNota;
+
+fimSe
+fimSe
+
+	caso 'D': 
+		
+	escreva ("Entre com o nome do aluno: ");
+	leia(nomeAluno);
+
+	escreva ("Entre com a nota do aluno: ");
+	leia(nota);
+
+	se (nota >= 7) 
+	então { 
+		contAluno = contAluno+1; 
+		}
+	
+	se (nota > maiorNota) 
+	então {
+		 maiorNota = nota;
+		}
+	
+	notaN4 = maiorNota;
+
+fimSe
+fimSe
+
+
+FIM-ESCOLHA
+
+ATE cadastro = 'N';
+
+
+	escreva("A quantidade de alunos aprovados foi: ", contAluno);
+ 
+	se (notaN1 > notaN2) e (notaN1 > notaN3) e (notaN1 > notaN4) entao
+		escreva("A Maior nota foi: ", notaN1, " da turma A");
+
+	se (notaN2 > notaN3) e (notaN3 > notaN4) entao
+		escreva("A Maior nota foi: ", notaN2, " da turma B");
+
+	se (notaN3 > notaN4) entao
+		escreva("A Maior nota foi: ", notaN3, " da turma C");
+
+	senao 
+		escreva("A Maior nota foi: ", notaN4, " da turma D");
+
+fimAlgoritmo
